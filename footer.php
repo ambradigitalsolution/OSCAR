@@ -11,10 +11,10 @@
             <div class="footer-col social-col">
                 <h3>Sosial Media</h3>
                 <ul>
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
-                    <li><a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+                    <li><a href="https://facebook.com/profile.php?id=61573031386097" target="_blank"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="https://instagram.com/oscarnetwork.id" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://linkedin.com/company/oscarnetwork" target="_blank"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
+                    <li><a href="https://tiktok.com/@oscarnetworkindonesia" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
                 </ul>
             </div>
 
