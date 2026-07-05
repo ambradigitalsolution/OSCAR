@@ -19,8 +19,8 @@ get_header(); ?>
         <div class="intro-grid">
             <div class="intro-text">
                 <h2>Tentang Oscar Network</h2>
-                <p>Oscar Network adalah perusahaan yang bergerak di bidang jual beli aset IT bekas, pemborongan, dan lelang barang-barang inventaris perusahaan. Kami berpengalaman bertahun-tahun dalam mengelola proses likuidasi aset dengan profesional dan transparan.</p>
-                <p>Misi kami adalah memberikan kemudahan, kecepatan, dan harga terbaik bagi klien yang ingin memperbarui infrastruktur IT atau sekadar mencari nilai tambah dari aset yang sudah tidak terpakai.</p>
+                <p>Oscar Network adalah mitra terpercaya yang bergerak di bidang spesialisasi pembelian server, perangkat <em>data center</em>, dan aset IT bekas berskala besar. Kami berpengalaman melayani proses likuidasi dan pemborongan inventaris dari berbagai sektor, termasuk perusahaan swasta, perbankan, kampus, hotel, rumah sakit, hingga instansi pemerintah.</p>
+                <p>Misi kami adalah memberikan solusi pencairan aset (<em>asset liquidation</em>) yang cepat, aman, dan transparan. Kami hadir untuk memastikan Anda mendapatkan penawaran harga terbaik di pasaran saat memperbarui infrastruktur IT perusahaan Anda.</p>
             </div>
             
             <div class="intro-pillars">
