@@ -1,0 +1,30 @@
+name: Deploy to FTP
+
+on:
+  push:
+    branches:
+      - main # Ubah ke 'master' jika default branch Anda adalah master
+
+jobs:
+  ftp-deploy:
+    name: Deploy to FTP server
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+      
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          
+          # Opsional: Jika Anda ingin upload ke folder spesifik di dalam FTP Anda
+          # server-dir: /public_html/
+          
+          # Opsional: Jika Anda ingin mengecualikan file atau folder tertentu (seperti .git, dll)
+          # exclude: |
+          #   **/.git*
+          #   **/.git*/**
+          #   **/.github*/**
