@@ -236,7 +236,12 @@ get_header(); ?>
                 ?>
                     <div class="bento-box" style="text-align: center; padding: 50px;">
                         <i class="fa-solid fa-ghost" style="font-size: 3rem; color: #ccc; margin-bottom: 20px;"></i>
-                        <h3 style="color: #666; margin: 0;">Belum ada artikel yang diterbitkan.</h3>
+                        <?php if ( is_search() ) : ?>
+                            <h3 style="color: #555; margin: 0 0 10px 0; font-size: 1.4rem;">Maaf, tidak ada artikel yang cocok dengan pencarian Anda.</h3>
+                            <p style="color: #888; margin: 0; font-size: 1rem;">Silakan coba dengan kata kunci lain.</p>
+                        <?php else : ?>
+                            <h3 style="color: #666; margin: 0; font-size: 1.4rem;">Belum ada artikel yang diterbitkan.</h3>
+                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
 
