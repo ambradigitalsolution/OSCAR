@@ -54,3 +54,14 @@ function oscar_auto_create_pages() {
     }
 }
 add_action( 'init', 'oscar_auto_create_pages' );
+
+/**
+ * Restrict search results to only show posts (exclude pages)
+ */
+function oscar_search_filter_only_posts($query) {
+    if ($query->is_search && !is_admin() && $query->is_main_query()) {
+        $query->set('post_type', 'post');
+    }
+    return $query;
+}
+add_filter('pre_get_posts', 'oscar_search_filter_only_posts');
