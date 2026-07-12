@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Blog
+Template Name: Template Halaman Blog
 */
 get_header(); ?>
 
