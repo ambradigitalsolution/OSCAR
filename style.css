@@ -45,14 +45,14 @@ a {
 }
 
 /* Styles for links inside regular text/paragraphs */
-p a, .post-content a, .entry-content a, .textwidget a, .cta-text a, .wp-block-group a, .wp-block-quote a {
+.post-content a, .entry-content a, .textwidget a, .wp-block-group a, .wp-block-quote a, .wp-block-column a, .wp-block-paragraph a, .entry-content p a, .post-content p a {
     color: var(--secondary-color, #0095ff) !important;
     text-decoration: underline !important;
     font-weight: 700;
     transition: all 0.3s ease;
 }
 
-p a:hover, .post-content a:hover, .entry-content a:hover, .textwidget a:hover, .cta-text a:hover, .wp-block-group a:hover, .wp-block-quote a:hover {
+.post-content a:hover, .entry-content a:hover, .textwidget a:hover, .wp-block-group a:hover, .wp-block-quote a:hover, .wp-block-column a:hover, .wp-block-paragraph a:hover, .entry-content p a:hover, .post-content p a:hover {
     color: var(--accent-color, #0056b3) !important;
 }
 
