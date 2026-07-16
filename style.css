@@ -44,6 +44,19 @@ a {
     color: inherit;
 }
 
+/* Styles for links inside regular text/paragraphs */
+p a {
+    color: #0095ff; /* Match secondary color but explicit for safety */
+    color: var(--secondary-color, #0095ff);
+    text-decoration: underline;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+p a:hover {
+    color: var(--accent-color, #0056b3);
+}
+
 ul {
     list-style: none;
 }
