@@ -298,28 +298,31 @@ get_header(); ?>
                     </article>
                     
                     <!-- 4. BENTO NAVIGATION (Artikel Prev/Next) -->
-                    <div class="bento-box">
-                        <h3 style="font-size: 1.1rem; font-weight: 800; margin: 0 0 20px 0; color: #111;">Baca juga:</h3>
-                        <div class="post-navigation-bento">
-                            <?php $prev_post = get_previous_post(); if (!empty($prev_post)): ?>
-                                <a href="<?php echo get_permalink($prev_post->ID); ?>" class="post-nav-card" style="text-align: left;">
-                                    <span class="nav-label"><i class="fa-solid fa-arrow-left"></i> Sebelumnya</span>
-                                    <h4 class="nav-title"><?php echo get_the_title($prev_post->ID); ?></h4>
-                                </a>
-                            <?php else: ?>
-                                <div style="flex: 1;"></div>
-                            <?php endif; ?>
-
-                            <?php $next_post = get_next_post(); if (!empty($next_post)): ?>
-                                <a href="<?php echo get_permalink($next_post->ID); ?>" class="post-nav-card" style="text-align: right;">
-                                    <span class="nav-label">Selanjutnya <i class="fa-solid fa-arrow-right"></i></span>
-                                    <h4 class="nav-title"><?php echo get_the_title($next_post->ID); ?></h4>
-                                </a>
-                            <?php else: ?>
-                                <div style="flex: 1;"></div>
-                            <?php endif; ?>
+                    <?php $prev_post = get_previous_post(); if (!empty($prev_post)): ?>
+                    <div class="bento-box" style="padding: 20px;">
+                        <div style="background: #f8f9fa; border-left: 5px solid #0095ff; padding: 18px 20px; border-radius: 8px;">
+                            <span style="font-weight: 800; color: #111; font-size: 1.1rem;">Baca Juga: </span> 
+                            <a href="<?php echo get_permalink($prev_post->ID); ?>" style="color: #0095ff; text-decoration: underline; font-weight: 700; font-size: 1.1rem; line-height: 1.5;">
+                                <?php echo get_the_title($prev_post->ID); ?>
+                            </a>
                         </div>
                     </div>
+                    <?php endif; ?>
+
+                    <?php $next_post = get_next_post(); if (!empty($next_post)): ?>
+                    <div class="bento-box" style="padding: 20px;">
+                        <div style="display: flex; justify-content: flex-end;">
+                            <a href="<?php echo get_permalink($next_post->ID); ?>" class="post-nav-card" style="text-align: right; background: #f8f9fa; padding: 20px 25px; border-radius: 12px; text-decoration: none; display: inline-block; max-width: 70%; transition: background 0.3s ease;">
+                                <div class="nav-label" style="color: #0095ff; font-size: 0.85rem; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; margin-bottom: 8px; display: flex; align-items: center; justify-content: flex-end; gap: 5px;">
+                                    SELANJUTNYA <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                                <h4 class="nav-title" style="margin: 0; font-size: 1.1rem; color: #111; line-height: 1.5; font-weight: 700;">
+                                    <?php echo get_the_title($next_post->ID); ?>
+                                </h4>
+                            </a>
+                        </div>
+                    </div>
+                    <?php endif; ?>
 
                 <?php endwhile; endif; ?>
             </div> <!-- End blog-main-content -->
