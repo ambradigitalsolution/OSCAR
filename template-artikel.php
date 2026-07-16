@@ -296,12 +296,6 @@ get_header(); ?>
                         <div class="bento-box">
                             <div class="post-content">
                                 <?php the_content(); ?>
-                                
-                                <div class="article-cta" style="margin-top: 40px; padding: 25px; background-color: #f8f9fa; border-radius: 16px; border: 1px solid #eaeaea;">
-                                    <p style="margin: 0; font-size: 1.15rem; color: #333; line-height: 1.8;">
-                                        Jadi, kapan kita bisa ngopi bareng sambil ngecek tumpukan server di ruang IT kamu? Langsung <a href="https://wa.me/6285800436222?text=Halo%20Oscar%20Network%2C%20saya%20ingin%20cek%20harga%20server%20bekas." target="_blank" style="font-weight: 700;">Hubungi Oscar Network sekarang untuk cek harga !</a> Biar kami yang urus sisanya, kamu tinggal terima beres dan lihat saldo rekening nambah.
-                                    </p>
-                                </div>
                             </div>
                         </div>
 
