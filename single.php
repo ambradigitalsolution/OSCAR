@@ -298,7 +298,14 @@ get_header(); ?>
                     </article>
                     
                     <!-- 4. BENTO NAVIGATION (Artikel Prev/Next) -->
-                    <?php $prev_post = get_previous_post(); if (!empty($prev_post)): ?>
+                    <?php 
+                        $prev_post = get_previous_post(); 
+                        if (empty($prev_post)) {
+                            $fallback_prev = get_posts(array('numberposts' => 1, 'orderby' => 'rand', 'exclude' => array(get_the_ID())));
+                            if (!empty($fallback_prev)) $prev_post = $fallback_prev[0];
+                        }
+                        if (!empty($prev_post)): 
+                    ?>
                     <div class="bento-box" style="padding: 20px;">
                         <div style="background: #f8f9fa; border-left: 5px solid #0095ff; padding: 18px 20px; border-radius: 8px;">
                             <span style="font-weight: 800; color: #111; font-size: 1.1rem;">Baca Juga: </span> 
@@ -309,7 +316,16 @@ get_header(); ?>
                     </div>
                     <?php endif; ?>
 
-                    <?php $next_post = get_next_post(); if (!empty($next_post)): ?>
+                    <?php 
+                        $next_post = get_next_post(); 
+                        if (empty($next_post)) {
+                            $exclude_ids = array(get_the_ID());
+                            if (!empty($prev_post)) $exclude_ids[] = $prev_post->ID;
+                            $fallback_next = get_posts(array('numberposts' => 1, 'orderby' => 'rand', 'exclude' => $exclude_ids));
+                            if (!empty($fallback_next)) $next_post = $fallback_next[0];
+                        }
+                        if (!empty($next_post)): 
+                    ?>
                     <div class="bento-box" style="padding: 20px;">
                         <div style="display: flex; justify-content: flex-end;">
                             <a href="<?php echo get_permalink($next_post->ID); ?>" class="post-nav-card" style="text-align: right; background: #f8f9fa; padding: 20px 25px; border-radius: 12px; text-decoration: none; display: inline-block; max-width: 70%; transition: background 0.3s ease;">
