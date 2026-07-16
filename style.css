@@ -45,16 +45,15 @@ a {
 }
 
 /* Styles for links inside regular text/paragraphs */
-p a {
-    color: #0095ff; /* Match secondary color but explicit for safety */
-    color: var(--secondary-color, #0095ff);
+p a, .post-content a, .entry-content a, .textwidget a, .cta-text a {
+    color: #25d366; /* WhatsApp green like the screenshot */
     text-decoration: underline;
-    font-weight: 600;
+    font-weight: 700;
     transition: all 0.3s ease;
 }
 
-p a:hover {
-    color: var(--accent-color, #0056b3);
+p a:hover, .post-content a:hover, .entry-content a:hover, .textwidget a:hover, .cta-text a:hover {
+    color: #128c7e; /* Darker green on hover */
 }
 
 ul {
